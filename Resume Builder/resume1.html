@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Right Resume</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
+  </noscript>
+  <link href="css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
+  <link href="css/aos.css?ver=1.2.0" rel="stylesheet">
+  <link href="css/main.css?ver=1.2.0" rel="stylesheet">
+  <noscript>
+
+  </noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    function onDocLoad() {
+
+      var fdata = JSON.parse(window.localStorage.getItem("formDate"));
+      ///{fname: as, mname: asa, lname:322}
+      console.log(fdata);
+      for (var key in fdata) {
+        try {
+          document.getElementById(key).innerHTML = fdata[key];
+        }
+        catch (e) {
+          console.log("errorwithfields " + key);
+        }
+
+
+      }
+
+    }
+
+  </script>
+
+  <script>
+    function onBtnClick() {
+      const btn = document.getElementById("button2");
+
+      var element = document.getElementById('top');
+      html2pdf().from(element).save('filename.pdf');
+      console.log(html2pdf().from(element).save('filename.pdf'))
+    }
+  </script>
+
+</head>
+
+<body onload="onDocLoad()" id="top">
+  <header class="d-print-none">
+    <div class="container text-center text-lg-left">
+      <div class="py-3 clearfix">
+        <h1 class="site-title mb-0" style="font-size:40px">
+
+          Resume
+        </h1>
+        <div id="button9" class="div2" style="padding-top: 10px; padding-right: 30px;">
+          <button onclick="onBtnClick()" type="button" class="btn btn-outline-success" style="float: right"> Download
+            Resume
+          </button>
+          <div class="site-nav">
+            <div class="col-md-8.5">
+              <div style="padding-right: 20px">
+                <i class="fab fa-instagram" style="font-size:20px;color:red"></i>
+
+                <span id="In" name="In"></span>
+              </div>
+
+
+              <i class="fab fa-facebook" style="font-size:20px;color:#000080"></i>
+              <span id="fb" name="fb"></span>
+
+              <div>
+
+
+
+                <i class="fab fa-linkedin" style="font-size:20px;color:#000080"></i>
+                <span id="Ln" name="Ln"></span>
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="page-content">
+    <div class="container">
+      <div class="cover shadow-lg bg-white">
+        <div class="cover-bg p-3 p-lg-4 text-white">
+          <!--<div class="row">
+      <div class="col-lg-4 col-md-5">
+        <div class="avatar hover-effect bg-white shadow-sm p-1"><img src="avatar.jfif" width="200" height="200"/></div>
+      </div>
+      
+        
+      </div>-->
+          <div class="col-lg-12 col-md-7 text-center text-md-start">
+            <h2 class="h1 mt-7" data-aos="fade-left" data-aos-delay="0"><Span id="firstName" name="firstname">
+              </Span><span id="lastName" name="lastName"></span></h2>
+            <p data-aos="fade-left" data-aos-delay="100"></p>
+          </div>
+
+        </div>
+        <div class="about-section pt-4 px-3 px-lg-4 mt-1">
+          <div class="row">
+            <div class="col-md-6" style="padding-left:60px">
+              <h2 class="h3 mb-3">About Me</h2>
+              <p class="text-box">Hello!
+                <span id="Describe" name="Describe"></span>
+              </p>
+            </div>
+            <div class="col-md-5 offset-md-1">
+              <div class="row mt-2">
+                <div class="col-sm-4">
+                  <div class="pb-1">Date Of Birth</div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="pb-1 text-secondary"><span id="dob" name="dob"></span></div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="pb-1">Email</div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="pb-1 text-secondary"><span id="Email" name="Email"></span></div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="pb-1">Phone</div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="pb-1 text-secondary"><span id="mobile" name="mobile"></span></div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="pb-1">Address</div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="pb-1 text-secondary"><span name="Address" id="Address"></span></div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="pb-1">Gender</div>
+                </div>
+                <div class="col-sm-8">
+
+                  <div class="pb-1 text-secondary"><span name="Gender" id="Gender"></span></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="d-print-none" />
+          <div class="skills-section px-3 px-lg-4">
+                        <hr class="d-print-none" />
+            <div class="work-experience-section px-3 px-lg-4">
+              <h2 class="h3 mb-3">Work Experience</h2>
+              <div class="timeline">
+                <div class="timeline-card timeline-card-primary card shadow-sm">
+                  <div class="card-body">
+                    <table class="table table-info" width="1000">
+
+
+                      <tr style="text-align:center">
+                        <th> Organization </th>
+                        <th> Joining Date</th>
+                        <th> Releaving Date </th>
+                        <th>Years on Experience</th>
+                      </tr>
+
+                      <tr width="1000">
+                        <td style="text-align:center"><span name="organization1" id="organization1"></span> </td>
+                        <td style="text-align:center"><span name="doj1" id="doj1"></span> </td>
+
+                        <td style="text-align:center"><span name="dor1" id="dor1"></span> </td>
+                        <td class="text-center"><span name="Experience" id="Experience"></span></td>
+
+                      </tr>
+                      <tr>
+                        <td style="text-align:center"> <span name="organization2" id="organization2"></span> </td>
+                        <td style="text-align:center"> <span name="doj2" id="doj2"></span> </td>
+
+                        <td style="text-align:center"> <span name="dor2" id="dor2"></span> </td>
+                        <td style="text-align:center"><span name="Experience1" id="Experience1"></span></td>
+                      </tr>
+
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="d-print-none" />
+            <div class="work-experience-section px-3 px-lg-4">
+              <h2 class="h3 mb-3">Skills</h2>
+              <div class="timeline">
+                <div class="timeline-card timeline-card-primary card shadow-sm">
+                  <div class="card-body">
+                    <table class="table table-info" width="1000">
+                      <thead>
+                        <tr style="text-align:center">
+                          <th> Technology</th>
+                          <th> project</th>
+                          <th> Last Worked On </th>
+                          <th> Rating </th>
+                        </tr>
+                      </thead>
+                      <tr width="1000">
+                        <td style="text-align:center"><span name="tech1" id="tech11"></span> </td>
+                        <td style="text-align:center"><span name="company1" id="company1"></span> </td>
+                        <td style="text-align:center"><span name="lastworkedon1" id="lastworkedon1"></span> </td>
+                        <td style="text-align:center"><span name="rate1" id="rate1"></span> </td>
+
+                      </tr>
+                      <tr width="1000">
+                        <td style="text-align:center"><span name="tech2" id="tech2"></span> </td>
+                        <td style="text-align:center"><span name="company2" id="company2"></span> </td>
+                        <td style="text-align:center"><span name="lastworkedon2" id="lastworkedon2"></span> </td>
+                        <td style="text-align:center"><span name="rate2" id="rate2"></span> </td>
+                      </tr>
+                      <tr width="1000">
+                        <td style="text-align:center"><span name="tech3" id="tech3"></span> </td>
+                        <td style="text-align:center"><span name="company3" id="company3"></span> </td>
+                        <td style="text-align:center"><span name="lastworkedon3" id="lastworkedon3"></span> </td>
+                        <td style="text-align:center"><span name="rate3" id="rate3"></span> </td>
+                      </tr>
+                      <tr width="1000">
+                        <td style="text-align:center"><span name="tech4" id="tech4"></span> </td>
+                        <td style="text-align:center"><span name="company4" id="company4"></span> </td>
+                        <td style="text-align:center"><span name="lastworkedon4" id="lastworkedon4"></span> </td>
+                        <td style="text-align:center"><span name="rate4" id="rate4"></span> </td>
+                      </tr>
+                      <tr width="1000">
+                        <td style="text-align:center"><span name="tech5" id="tech5"></span> </td>
+                        <td style="text-align:center"><span name="company5" id="company5"></span> </td>
+                        <td style="text-align:center"><span name="lastworkedon5" id="lastworkedon5"></span> </td>
+                        <td style="text-align:center"><span name="rate6" id="rate6"></span> </td>
+                      </tr>
+
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="d-print-none" />
+            <div class="work-experience-section px-3 px-lg-4">
+              <h2 class="h3 mb-3">Education</h2>
+              <div class="timeline">
+                <div class="timeline-card timeline-card-primary card shadow-sm">
+                  <div class="card-body">
+                    <table class="table table-info" width="1000">
+
+                      <thead>
+                        <tr style="text-align:center">
+                          <th> Education </th>
+                          <th> School/University</th>
+                          <th> Year of Passing </th>
+                          <th> Percentage/CGPA </th>
+                        </tr>
+                      </thead>
+
+                      <tr style="text-align:center">
+                        <td> <label>Post Graduation</label> </td>
+                        <td style="text-align:center"><span name="university1" id="university1"></span> </td>
+                        <td style="text-align:center"><span name="yearofpassing1" id="yearofpassing1"></span> </td>
+                        <td style="text-align:center"><span name="percentage1" id="percentage1"></span> </td>
+
+                      </tr>
+                      <tr style="text-align:center">
+                        <td> <label>Graduation</label> </td>
+                        <td style="text-align:center"><span name="university2" id="university2"></span> </td>
+                        <td style="text-align:center"><span name="yearofpassing2" id="yearofpassing2"></span> </td>
+                        <td style="text-align:center"><span name="percentage2" id="percentage2"></span> </td>
+                      </tr>
+                      <tr style="text-align:center">
+                        <td> <label>Intermidate</label> </td>
+                        <td style="text-align:center"><span name="university3" id="university3"></span> </td>
+                        <td style="text-align:center"><span name="yearofpassing3" id="yearofpassing3"></span> </td>
+                        <td style="text-align:center"><span name="percentage3" id="percentage3"></span> </td>
+                      </tr>
+                      <tr style="text-align:center">
+                        <td> <label>High School</label> </td>
+                        <td style="text-align:center"><span name="university4" id="university4"></span> </td>
+                        <td style="text-align:center"><span name="yearofpassing4" id="yearofpassing4"></span> </td>
+                        <td style="text-align:center"><span name="percentage4" id="percentage4"></span> </td>
+
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="d-print-none" />
+            <div class="work-experience-section px-3 px-lg-4">
+              <h2 class="h3 mb-3">Declaration with Signature</h2>
+              <div class="timeline">
+                <div class="timeline-card timeline-card-primary card shadow-sm">
+                  <div class="card-body" style="background-color:#BDEDFF">
+                    <br>
+                    <div class="pb-1 text-secondary"><span name="Declaration" id="Declaration"></span></div>
+                    <div class="card-body" style="background-color:#BDEDFF">
+                      <div class="timeline-card timeline-card-primary card shadow-sm" style="width:auto"
+                        style="background-color:#BDEDFF">
+                        <br>
+
+                        <div class="pb-1 text-secondary"><span name="Signature" id="Signature"
+                            style="width:auto"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <center>
+                
+                
+                <h1> Thank You ! </h1>
+              </center>
+
+
+
+              <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
+              <script src="scripts/aos.js?ver=1.2.0"></script>
+              <script src="scripts/main.js?ver=1.2.0"></script>
+</body>
+
+</html>
